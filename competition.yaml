@@ -1,0 +1,103 @@
+title: eHealth KD @TASS18
+description: Automated knowledge extraction from electronic health documents.
+has_registration: True
+image: logo.png
+
+html:
+  overview: overview.html
+  evaluation: evaluation.html
+  terms: terms.html
+  data: data.html
+
+phases:
+  1:
+    phasenumber: 1
+    label: "Trial"
+    start_date: 2018-02-10
+    scoring_program: score.zip
+    reference_data: reference.zip
+
+leaderboard:
+  leaderboards:
+    OVERALL: &OVERALL
+      label: Macro-Averaged Score
+      rank: 1
+    ABC: &ABC
+      label: Results for A-B-C Round
+      rank: 2
+    BC: &BC
+      label: Results for B-C Round
+      rank: 3
+    C: &C
+      label: Results for C Round
+      rank: 4
+  columns:
+    macro:
+      leaderboard: *OVERALL
+      label: Score (Average F1)
+      rank: 1
+      numeric_format: 2
+      sort: desc
+
+    abc_f1:
+      leaderboard: *ABC
+      label: F1
+      rank: 1
+      numeric_format: 2
+      sort: desc
+
+    abc_prec:
+      leaderboard: *ABC
+      label: Precision
+      rank: 2
+      numeric_format: 2
+      sort: desc
+
+    abc_rec:
+      leaderboard: *ABC
+      label: Recall
+      rank: 3
+      numeric_format: 2
+      sort: desc
+
+    bc_f1:
+      leaderboard: *BC
+      label: F1
+      rank: 1
+      numeric_format: 2
+      sort: desc
+
+    bc_prec:
+      leaderboard: *BC
+      label: Precision
+      rank: 2
+      numeric_format: 2
+      sort: desc
+
+    bc_rec:
+      leaderboard: *BC
+      label: Recall
+      rank: 3
+      numeric_format: 2
+      sort: desc
+
+    c_f1:
+      leaderboard: *C
+      label: F1
+      rank: 1
+      numeric_format: 2
+      sort: desc
+
+    c_prec:
+      leaderboard: *C
+      label: Precision
+      rank: 2
+      numeric_format: 2
+      sort: desc
+
+    c_rec:
+      leaderboard: *C
+      label: Recall
+      rank: 3
+      numeric_format: 2
+      sort: desc
