@@ -10,12 +10,29 @@ html:
   data: data.html
 
 phases:
-  1:
+  0:
+    color: green
+    label: Trial
+    max_submissions: 100
+    max_submissions_per_day: 100
     phasenumber: 1
-    label: "Trial"
-    start_date: 2018-02-10
-    scoring_program: score.zip
     reference_data: reference_trial.zip
+    scoring_program: score.zip
+    start_date: 2018-02-10
+  1:
+    color: yellow
+    label: Train
+    max_submissions: 100
+    max_submissions_per_day: 100
+    phasenumber: 2
+    start_date: 2018-04-02
+  2:
+    color: orange
+    label: Test
+    max_submissions: 100
+    max_submissions_per_day: 100
+    phasenumber: 3
+    start_date: 2018-05-07
 
 leaderboard:
   leaderboards:
