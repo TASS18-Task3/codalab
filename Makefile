@@ -1,5 +1,5 @@
 bundle.zip: competition.yaml overview.html data.html evaluation.html terms.html logo.png score.zip reference_trial.zip sample_trial.zip
-	zip bundle.zip competition.yaml overview.html data.html evaluation.html terms.html logo.png score.zip reference.zip
+	zip bundle.zip competition.yaml overview.html data.html evaluation.html terms.html logo.png score.zip reference_trial.zip
 
 score.zip: ../data/score.py ../data/tools.py metadata
 	zip -j -r score.zip ../data/score.py ../data/tools.py metadata
